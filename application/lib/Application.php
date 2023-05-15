@@ -30,12 +30,14 @@ class Application {
         // + ex) URL 경로가 "/product/list"인 경우 $arrPath 배열에는 "product"와 "list" 두 개의 요소가 저장되고, 
         // + 첫번째 요소인 "product"를 ucfirst 함수를 사용하여 첫글자를 대문자로 변환한 후,
         // + "Product"라는 문자열이 $identityName 변수에 저장
-        $identityName = empty($arrPath[0]) ? "User" : ucfirst($arrPath[0]); 
+        // $identityName = empty($arrPath[0]) ? "User" : ucfirst($arrPath[0]); //첫페이지 login
+        $identityName = empty($arrPath[0]) ? "Shop" : ucfirst($arrPath[0]); 
         
         // GET이 전부 대문자기때문에 모두 소문자로 바꿔준 뒤, 첫글자만 대문자로(= Get)
         // + URL 경로의 "login"이 존재하는 경우 HTTP 요청 메서드(첫 글자를 대문자로 변환, = Get)와 연결하여 수행할 작업을 결정함
         // + ex) loginGet
-        $action = (empty($arrPath[1]) ? "login" : $arrPath[1]).ucfirst(strtolower($_SERVER["REQUEST_METHOD"])); 
+        // $action = (empty($arrPath[1]) ? "login" : $arrPath[1]).ucfirst(strtolower($_SERVER["REQUEST_METHOD"])); //첫페이지 login
+        $action = (empty($arrPath[1]) ? "main" : $arrPath[1]).ucfirst(strtolower($_SERVER["REQUEST_METHOD"])); 
 
         // Controller명 작성
         // + 결정된 컨트롤러 이름을 기반으로 컨트롤러 파일의 경로를 구성

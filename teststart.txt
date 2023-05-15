@@ -22,4 +22,14 @@ https://shinnewjean.github.io/shinnewjean2305/
 https://shinnewjean.github.io/shinnewjean2305/MainHome.html
 ---------------------------------------------------------------------------------------------------
 
-xcopy D:\workspace\mini_2 C:\Apache24\htdocs /H /Y /F /E /exclude:D:\workspace\mini_2\exclude.txt
+xcopy D:\shin\shinnewjean2305\application C:\Apache24\htdocs\application /s /h /r /k /y
+
+---------------------------------------------------------------------------------------------------
+메인페이지
+    /헤더 푸터 
+마이페이지 
+    /로그인 되어있을경우 마이페이지
+    /로그인이 안되어있을경우 로그인후 이용가능합니다 -> 로그인페이지로 이동하기 버튼
+로그인페이지
+    /로그인페이지
+회원가입페이지

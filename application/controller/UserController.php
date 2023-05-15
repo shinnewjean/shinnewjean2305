@@ -9,6 +9,10 @@ class UserController extends Controller{
         return "login"._EXTENSION_PHP;
     }
 
+    public function mainGet() {
+        return "main"._EXTENSION_PHP;
+    }
+
     // + POST 방식으로 로그인 정보를 전달할 때 실행되는 메서드
     public function loginPost() {
         $result = $this->model->getUser($_POST);
@@ -24,7 +28,9 @@ class UserController extends Controller{
         // session에 User ID 저장
         $_SESSION[_STR_LOGIN_ID] = $_POST["id"];
         // 리스트 페이지 리턴
-        return _BASE_REDIRECT."/product/list";
+        // return _BASE_REDIRECT."/product/list";
+        return _BASE_REDIRECT."/user/main"; //로그인후 메인페이지로 리턴
+
     }
 
     // 로그아웃 메소드
