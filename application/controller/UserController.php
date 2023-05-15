@@ -38,7 +38,9 @@ class UserController extends Controller{
         session_unset();
         session_destroy();
         // 로그인 페이지 리턴
-        return "login"._EXTENSION_PHP;
+        // return "login"._EXTENSION_PHP;
+        // 리스트페이지로 리턴
+        return "main"._EXTENSION_PHP;
     }
 }
 ?>

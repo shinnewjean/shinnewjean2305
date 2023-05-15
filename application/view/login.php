@@ -19,6 +19,7 @@
 		<input type="text" name="pw" id="pw">
 		<button type="submit">Login</button>
 	</form>
+	<a href="/user/main">list</a>
 
 	
 	<script>

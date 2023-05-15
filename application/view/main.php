@@ -12,6 +12,8 @@
 <body>
     <h1>main.php</h1>
     <a href="/user/login">login</a> <!-- 이해필요 -->
+    <button id="logout" onclick="redirectLogout();">Logout</button>
+    <p>ID : <?php echo $_SESSION[_STR_LOGIN_ID] ?></p>
 
     <script>
 		function redirectLogout() {
