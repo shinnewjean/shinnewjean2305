@@ -7,7 +7,7 @@
 	<title>Login</title>
 </head>
 <body>
-	<h1>Login</h1>
+	<h1>shinnewjeanLogin</h1>
 	<h3 style="color: red;"><?PHP echo isset($this->errMsg) ? $this->errMsg : ""; ?></h3>
 	<form action="/user/login" method="post">
 		<label for="id">ID</label>
