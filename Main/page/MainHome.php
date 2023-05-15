@@ -14,8 +14,8 @@
             <header>
                 <? 
                 include_once( URL_HEADER ); 
-                <!-- include_once( "C:/Apache24/htdocs/PHP-506-2-2/src/common/db_common.php" ); -->
-                include_once 'MainHeader.php';     //프로필바 php 가져옴_회면의 좌측부분
+                include_once( "C:/Apache24/htdocs/PHP-506-2-2/src/common/db_common.php" );
+                // include_once 'MainHeader.php';     //프로필바 php 가져옴_회면의 좌측부분
                 ?>
             </header>
         </div>
