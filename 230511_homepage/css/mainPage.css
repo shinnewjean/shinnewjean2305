@@ -1,0 +1,14 @@
+
+body {
+    padding: 5%;
+}
+
+.mainHeader2 {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#myCarousel {
+    margin: 16px auto;
+}
+
