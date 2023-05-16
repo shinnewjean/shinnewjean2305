@@ -1,0 +1,17 @@
+CREATE DATABASE minitwo;
+
+USE minitwo;
+
+CREATE TABLE user_info(
+	u_no INT PRIMARY KEY AUTO_INCREMENT
+	,u_id VARCHAR(12) NOT NULL
+	,u_pw VARCHAR(512) NOT NULL
+);
+
+INSERT INTO user_info(u_id,u_pw) VALUES('php506','506');
+
+COMMIT;
+
+ALTER TABLE user_info ADD COLUMN  u_name VARCHAR(30) NOT NULL;
+
+FLUSH PRIVILEGES;
