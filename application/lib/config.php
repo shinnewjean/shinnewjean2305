@@ -1,6 +1,6 @@
 <?php
 
-define("_ROOT", $_SERVER["DOCUMENT_ROOT"]);
+define("_ROOT", $_SERVER["DOCUMENT_ROOT"]."/");
 
 // DB관련
 define("_DB_HOST", "localhost");
@@ -22,3 +22,11 @@ define("_BASE_FILENAME_MODEL", "Model");
 define("_BASE_REDIRECT", "Location: ");
 
 define("_STR_LOGIN_ID", "u_id");
+
+
+// HEADER 위치잡기
+define( "URL_HEADER", _ROOT._PATH_VIEW."commonHeader"._EXTENSION_PHP );
+// DB가져오기
+define( "URL_DB",  _ROOT._PATH_VIEW."db/common"._EXTENSION_PHP );
+// // img가져오기
+// define( "_URL_IMG",  _ROOT._PATH_VIEW."common/img/" );

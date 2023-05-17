@@ -1,17 +1,35 @@
 CREATE DATABASE minitwo;
+-- DROP TABLE user_info;
+-- DROP DATABASE minitwo;
 
 USE minitwo;
 
-CREATE TABLE user_info(
-	u_no INT PRIMARY KEY AUTO_INCREMENT
-	,u_id VARCHAR(12) NOT NULL
-	,u_pw VARCHAR(512) NOT NULL
+CREATE TABLE user_info (
+	u_no	INT(11)	PRIMARY KEY AUTO_INCREMENT
+	,u_id	VARCHAR(12)	NOT NULL
+	,u_pw	VARCHAR(512)	NOT NULL
+	,u_name	VARCHAR(512)	NOT NULL	DEFAULT 0
+	,u_nickname	VARCHAR(512)	NOT NULL	DEFAULT 0
+	,u_delst	CHAR(1)	NOT NULL	DEFAULT 0
 );
 
-INSERT INTO user_info(u_id,u_pw) VALUES('php506','506');
+INSERT INTO user_info(u_id,u_pw,u_name,u_nickname) VALUES('php506','506','php506','mainmanager');
+
+USE minitwo;
+
+CREATE TABLE product_info (
+	Pdt_no	INT(11) PRIMARY KEY	NOT NULL	AUTO_INCREMENT
+	,Pdt_name	VARCHAR(12)	NOT NULL	DEFAULT 0
+	,Pdt_detail	VARCHAR(50)	NOT NULL	DEFAULT 0
+	,Pdt_img	VARCHAR(255)	NOT NULL	DEFAULT 0
+	,Pdt_delst	CHAR(1)	NOT NULL	DEFAULT 0
+);
+
+INSERT INTO product_info(Pdt_name) VALUES('test1');
 
 COMMIT;
 
 ALTER TABLE user_info ADD COLUMN  u_name VARCHAR(30) NOT NULL;
 
 FLUSH PRIVILEGES;
+
